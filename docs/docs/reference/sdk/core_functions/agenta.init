@@ -1,0 +1,21 @@
+---
+title: "init(
+from openai import OpenAI
+
+client = OpenAI()
+
+def generate(subject: str):
+    prompt = "Write an blog post about {subject}"
+    formatted_prompt = prompt.format(subject=subject)
+    chat_completion = client.chat.completions.create(
+        model="gpt-3.5-turbo", messages=[{"role": "user", "content": prompt}]
+    )
+    return chat_completion.choices[0].message.content)"
+description: "Call at the start of your code to initialize your variant"
+---
+
+
+`agenta.init()`
+
+Initialize your variant. 
+You need to call this function once at the entry point of your code. 
