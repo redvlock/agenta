@@ -1,3 +1,4 @@
 llama_index==0.7.24.post1
 agenta
 python-dotenv
+urllib3>=2.6.3 # not directly required, pinned by Snyk to avoid a vulnerability
